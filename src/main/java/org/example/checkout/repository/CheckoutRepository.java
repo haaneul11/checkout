@@ -1,0 +1,7 @@
+package org.example.checkout.repository;
+
+import org.example.checkout.entity.Checkout;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CheckoutRepository extends JpaRepository<Checkout, Long> {
+}
