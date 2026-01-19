@@ -2,6 +2,7 @@ package org.example.checkout.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.ColumnDefault;
 
 @Data
 @Entity
@@ -15,7 +16,11 @@ public class Checkout {
     private String shippingMasterId;  // 배송지
     private String productId;  // orderGroupId -- productId, cartNo
     private Integer quantity;
-    private String paymentId; // pm_01
     private double totalPrice;
+    private String paymentId; // pm_01
+
+    @ColumnDefault("Not Paid")
+    private String paymentStatus;
+
 
 }
